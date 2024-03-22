@@ -1,11 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Discover from './discover'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
+  function refreshPage () {
+    window.location.reload()
+  }
 
   return (
     <div className='container'>
@@ -16,7 +18,7 @@ function App() {
         <br></br>
         <div className='discoverContainer'>
           <Discover />
-          <button className='discoverButton'>Discover</button>
+          <button onClick={ refreshPage } className='discoverButton'>Discover</button>
         </div>
         
       </div>
